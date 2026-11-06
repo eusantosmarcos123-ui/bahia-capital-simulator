@@ -1,0 +1,101 @@
+/* ============================================================
+   BAHIA CAPITAL CONSULTORIA — DESIGN SYSTEM EXECUTIVO
+   ============================================================ */
+
+:root {
+  --bg-main: #060b14;
+  --bg-card: #0d1728;
+  --bg-card-hover: #121f36;
+  --border-color: #1a2a44;
+  --primary-gold: #d4af37;
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --success-green: #00e676;
+  --danger-red: #ff5252;
+  --text-main: #f0f4f8;
+  --text-muted: #8a99ad;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Card Effect */
+.glass-card {
+  background: rgba(13, 23, 40, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Gold Accents & Badges */
+.badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--primary-gold);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.badge-stock {
+  background: rgba(33, 150, 243, 0.15);
+  color: #64b5f6;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.badge-crypto {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060b14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2a44;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-gold);
+}
+
+/* Glow effects */
+.glow-gold {
+  box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px rgba(0, 230, 118, 0.2);
+}
+
+/* Tab Active Styles */
+.trade-tab.active-buy {
+  background: var(--success-green);
+  color: #000;
+  font-weight: 700;
+}
+
+.trade-tab.active-sell {
+  background: var(--danger-red);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Number transitions */
+.ticker-price {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
